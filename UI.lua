@@ -171,4 +171,4 @@ end)
 
 -- Mặc định mở trang Setting khi load
 ClearContent()
-print("UI đã sẵn sàng, " .. _G.AOT_Hub.Config.Version)
+print("UI đã sẵn sàng, " .. _G.AOT_Hub.Settings.Version)
