@@ -1,6 +1,6 @@
 local Settings = {
     Version = "1.0.0",
-    Author = "Hưng Phạm"
+    Author = "Hung Pham"
 }
 
-return Settings -- BẮT BUỘC PHẢI CÓ DÒNG NÀY
+return Settings -- DÒNG NÀY PHẢI CÓ, KHÔNG CÓ LÀ LỖI TIẾP
