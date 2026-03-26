@@ -15,12 +15,13 @@ local function Import(path)
     if success and not content:find("404") then
         local func, err = loadstring(content)
         if func then
+            -- Nếu file chạy thành công thì lấy kết quả, không thì lấy bảng rỗng
             local res = func()
-            return res or {} -- Nếu file không return, trả về bảng rỗng
+            return (type(res) == "table" and res) or {}
         end
     end
-    warn("Lỗi nạp file: " .. path)
-    return {} -- Trả về bảng rỗng để không bị lỗi 'nil'
+    -- Trả về bảng rỗng để các file sau (như UI) gọi .Version sẽ ra nil chứ không báo lỗi sập script
+    return {} 
 end
 
 -- Nạp dữ liệu

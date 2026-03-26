@@ -163,12 +163,15 @@ CreateTab("Settings", function()
         AccentColor = NewColor
     end)
 end)
-
+    
 -- 8. LOGIC ẨN/HIỆN
 ToggleIcon.MouseButton1Click:Connect(function()
     Main.Visible = not Main.Visible
 end)
 
 -- Mặc định mở trang Setting khi load
+ClearContent()local success = pcall(function()
+    local ver = _G.AOT_Hub.Settings.Version or "1.0.0"
+end)
+
 ClearContent()
-print("UI đã sẵn sàng, " .. _G.AOT_Hub.Settings.Version)
